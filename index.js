@@ -5,6 +5,8 @@ const porta = 8080 //Porta em que o servidor vai iniciar
 const path = require('path')
 app.use('/assets', express.static(path.join(__dirname, 'public')))
 
+app.use('/data-delivery', express.static(path.join(__dirname, 'server/data')))
+
 const router = require("./server/router.js")
 router.Router(app)
 
