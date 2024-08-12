@@ -45,7 +45,7 @@ function Router(app) {
                     //homepage
                     response.status(200)
                     response.render(__dirname + '/pages/index')
-                    break
+                break
 
                 case '/sobre':
                     response.status(200)
@@ -65,7 +65,12 @@ function Router(app) {
                 case '/posts':
                     response.status(200)
                     response.send('posts')
-                    break
+                break
+
+                case '/termos-de-uso':
+                    response.status(200)
+                    response.render(__dirname + '/pages/termos_de_uso')
+                break
 
                 /*
                 default:
@@ -76,6 +81,11 @@ function Router(app) {
                 */
             }
         }
+    })
+
+    app.get('/termos-de-uso', (request, response) => {
+        response.status(200)
+        response.render(__dirname + '/pages/termos_de_uso')
     })
 }
 
