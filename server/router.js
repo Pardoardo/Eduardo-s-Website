@@ -44,7 +44,7 @@ function Router(app) {
                 case '/':
                     //homepage
                     response.status(200)
-                    response.sendFile(__dirname + '/pages/index.html')
+                    response.render(__dirname + '/pages/index')
                     break
 
                 case '/sobre':
