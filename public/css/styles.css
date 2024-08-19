@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root{
-    --bars-gradient: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgb(34, 32, 32) 100%);
+    --bars-gradient: linear-gradient(0deg, rgb(77, 0, 145) 0%, rgb(26, 4, 95) 100%);
+}
+
+::selection {
+    color: rgb(245, 234, 255);
+    background: rgb(112, 27, 187);
 }
 
 html, body{
+    background: url('/assets/img/outer-space-charlvera.jpg');
+    background-repeat: no-repeat;
+
     padding: 0;
     margin: 0;
     border: 0;   
-    background-color: rgb(55, 55, 55);
+    background-color: rgb(25, 3, 43);
 }
 
 .content{
@@ -73,30 +81,30 @@ html, body{
 }
 
 .posts-container{
-    background-color: rgb(219, 217, 255);
+    background-color: rgb(240, 240, 252);
 }
 
 .introduction{
     padding: 20px 20px;
     text-align: center;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: rgb(0, 0, 0);
+    color: rgb(131, 82, 176);
 }
 
 .viewer-content{
     height: 900px;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 }
 
 .projects-section{
     height: 240px;
     width: 873px;
     margin-left: 15px;
-    background-color: rgb(153, 153, 153);
+    background-color: rgb(151, 118, 174);
 }
 
 .projects-section header{
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px 10px;
     background: rgb(0,110,35);
@@ -108,11 +116,11 @@ html, body{
     margin-right: auto;
     height: 140px;
     width: 873px;
-    background-color: rgb(153, 153, 153);
+    background-color: rgb(151, 118, 174);
 }
 
 .posts-section header{
-    color: white;
+    color: rgb(255, 255, 255);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 10px 10px;
     background: rgb(0,110,35);
@@ -126,13 +134,13 @@ html, body{
     text-decoration: none;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 90px 20px;
-    background-color: rgb(81, 81, 81);
+    background-color: rgb(127, 96, 161);
     position: absolute;
     transition: 0.3s;
 }
 
 .section-next-button:hover{
-    background-color: rgb(33, 33, 33);
+    background-color: rgb(84, 13, 135);
 }
 
 footer{
@@ -155,7 +163,63 @@ footer{
 }
 
 footer a{
+    font-size: small;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin-left: 20px;
     color: white;
     font-weight: 500;
+}
+
+.projects-section .loading_label{
+    color: white;
+    position: absolute;
+    margin-top: 70px;
+    margin-left: 310px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: white;
+
+    animation: loading 1s infinite;
+}
+
+.posts-section .loading_label{
+    color: white;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: 310px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    text-shadow: white;
+
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    0%{
+        -webkit-transform: scale(1.0);
+   transform: scale(1.0);
+    }
+    50%{
+        text-shadow: 0 0 5px #783bfc,
+        0 0 10px #783bfc,
+        0 0 20px white,
+        0 0 30px white,
+        0 0 40px white,
+        0 0 55px white,
+        0 0 70px white;
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1); 
+    }
+}
+
+.background_author{
+    padding: 5px 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #220a56;
+    text-align: right;
+    color: white;
+}
+
+.background_author a{
+    margin-left: 3px;
 }
