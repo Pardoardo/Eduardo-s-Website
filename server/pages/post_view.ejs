@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="shortcut icon" href="assets/img/pardoardo_icon.png" type="image/x-icon">
+    <title>Pardoardo - <%= postTitle %></title>
+</head>
+
+<body>
+    <%- include('./partials/top_bar_alert')  %>
+    <div class="content">
+
+        <%- include('./partials/header'); %>
+        <div class="viewer-content" style="font-family: Arial, Helvetica, sans-serif; padding: 25px 25px; height: 1070px;">
+            <h1><%= postTitle %></h1>
+            <h5 style="color: rgb(64, 63, 63); margin-top: -15px;">por <%= postAuthor %></h5>
+            <h5 style="color: rgb(64, 63, 63); margin-top: -40px; text-align: right;"><%= birthDay %></h5>
+            <hr>
+            <p style="text-align:initial;"><%= postContent %></p>
+        </div>
+
+        <%- include('./partials/footer')  %>
+    </div>
+
+    <!--Scripts-->
+    <script defer src="assets/js/posts-handler.js"></script>
+</body>
+
+</html>

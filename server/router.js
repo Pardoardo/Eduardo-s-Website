@@ -1,5 +1,6 @@
 //Esse script serve para redirecionar o usuário para todas as rotas possíveis dentro do website
 
+const { json } = require('express')
 const fs = require('fs')
 const { get } = require('http')
 const path = require('path')
@@ -34,8 +35,17 @@ function Router(app) {
                     console.warn(`[PostDog]: Não foi possível encontrar ${postParam} em ${path}`)
                     response.end("Ops!! Parece que esse post foi pro vinagre... :(")
                 } else {
-                    response.setHeader('Content-Type', 'application/json')
-                    response.end(data)
+                    //response.setHeader('Content-Type', 'application/json')
+                    //response.end(data)
+                    response.status(200)
+                    let conData = JSON.parse(data)
+                    
+                    response.render(__dirname + '/pages/post_view', {
+                        postTitle: conData.title,
+                        postAuthor: conData.author,
+                        birthDay: conData.birthday,
+                        postContent: conData.content
+                    })
                 }
             })
             //Fim do "PostDog" e inicio do Router
