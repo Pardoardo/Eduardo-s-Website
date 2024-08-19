@@ -97,6 +97,26 @@ function Router(app) {
         response.status(200)
         response.render(__dirname + '/pages/termos_de_uso')
     })
+
+    app.get('/projetos', (request, response) => {
+        response.status(200)
+        response.render(__dirname + '/pages/projetos')
+    })
+
+    app.get('/blog', (request, response) => {
+        response.status(200)
+        response.render(__dirname + '/pages/blog')
+    })
+
+    app.get('/sobre', (request, response) => {
+        response.status(200)
+        response.render(__dirname + '/pages/sobre')
+    })
+
+    app.get('/contato', (request, response) => {
+        response.status(200)
+        response.render(__dirname + '/pages/contato')
+    })
 }
 
 module.exports = {
