@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root{
     --bars-gradient: linear-gradient(0deg, rgb(77, 0, 145) 0%, rgb(26, 4, 95) 100%);
@@ -12,7 +13,6 @@
 html, body{
     background: url('/assets/img/outer-space-charlvera.jpg');
     background-repeat: no-repeat;
-
     padding: 0;
     margin: 0;
     border: 0;   
@@ -62,7 +62,9 @@ html, body{
     padding: 0px 5px;
     font-size: small;
     font-weight: 500;
-    font-family: Verdana, Tahoma, Helvecta;
+    font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
     transition: 0.1s;
 }
 
@@ -87,7 +89,7 @@ html, body{
 .introduction{
     padding: 20px 20px;
     text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Dosis", Helvetica, Arial, Verdana, sans-serif;
     color: rgb(131, 82, 176);
 }
 
@@ -105,7 +107,9 @@ html, body{
 
 .projects-section header{
     color: rgb(255, 255, 255);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     padding: 10px 10px;
     background: rgb(0,110,35);
     background: var(--bars-gradient);
@@ -121,7 +125,9 @@ html, body{
 
 .posts-section header{
     color: rgb(255, 255, 255);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     padding: 10px 10px;
     background: rgb(0,110,35);
     background: var(--bars-gradient);
@@ -222,4 +228,13 @@ footer a{
 
 .background_author a{
     margin-left: 3px;
+}
+
+.post_content{
+    font-weight: 700;
+    font-family: "Dosis", Helvetica, Arial, Verdana, sans-serif;
+}
+
+.terms_of_use p{
+    font-family: "Dosis", Helvetica, Arial, Verdana, sans-serif;
 }
