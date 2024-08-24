@@ -1,4 +1,4 @@
-let maintenanceMode = true //Modo de manutenção do website que bloqueia todas os páginas e exibe um slide informativo.
+let maintenanceMode = false //Modo de manutenção do website que bloqueia todas os páginas e exibe um slide informativo.
 
 const express = require("express")
 const app = express()
