@@ -1,3 +1,5 @@
+let maintenanceMode = true //Modo de manutenção do website que bloqueia todas os páginas e exibe um slide informativo.
+
 const express = require("express")
 const app = express()
 const porta = 8080 //Porta em que o servidor vai iniciar
@@ -9,8 +11,19 @@ app.use('/assets', express.static(path.join(__dirname, 'public')))
 
 app.use('/data-delivery', express.static(path.join(__dirname, 'server/data')))
 
-const router = require("./server/router.js")
-router.Router(app)
+switch (maintenanceMode) {
+    case false:
+        const router = require("./server/router.js")
+        router.Router(app)
+    break
+
+    case true:
+        app.get('/', (request, response) => {
+            response.status(200)
+            response.render('../server/pages/manutencao')
+        })
+    break
+}
 
 app.listen(porta, () => {
     console.log(`Servidor inciado na porta ${porta}`)
