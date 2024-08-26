@@ -4,6 +4,8 @@ const express = require("express")
 const app = express()
 const porta = 8080 //Porta em que o servidor vai iniciar
 
+let dountime 
+
 app.set('view engine', 'ejs') //setando a engine de vizualização do express para trabalhar com o nosso famijerado "EJS"
 
 const path = require('path')
@@ -18,6 +20,8 @@ switch (maintenanceMode) {
     break
 
     case true:
+        dountime = new Date()
+        console.warn(`[servidor]: modo manutenção ativado! \n ${dountime}`)
         app.get('/', (request, response) => {
             response.status(200)
             response.render('../server/pages/manutencao')
